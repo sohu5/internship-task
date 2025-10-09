@@ -260,7 +260,7 @@ body {
     font-size: 16px;
   }
 }
-/* Carousel Controls */
+
 .carousel-controls {
   display: flex;
   gap: 20px;
@@ -290,9 +290,9 @@ body {
   background-color: #ff8c00;
 }
 
-/* ✅ Responsive buttons and placement */
 
-/* Tablets */
+
+
 @media (max-width: 1024px) {
   .carousel-controls {
     bottom: 20px;
@@ -306,7 +306,7 @@ body {
   }
 }
 
-/* Mobiles */
+
 @media (max-width: 768px) {
   .carousel-controls {
     position: relative;
@@ -335,7 +335,7 @@ body {
   }
 }
 
-/* Extra small devices */
+
 @media (max-width: 360px) {
   .carousel-controls button {
     width: 30px;
@@ -343,3 +343,4 @@ body {
     font-size: 16px;
   }
 }
+
