@@ -322,7 +322,7 @@ body {
   }
 }
 
-/* Small mobile screens */
+
 @media (max-width: 480px) {
   .carousel-controls {
     margin-top: 15px;
@@ -343,4 +343,3 @@ body {
     font-size: 16px;
   }
 }
-
