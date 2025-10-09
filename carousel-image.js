@@ -98,4 +98,3 @@ document.addEventListener('DOMContentLoaded', () => {
     updatePosition(false);
     startAutoScroll();
 });
-
