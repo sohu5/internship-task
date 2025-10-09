@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const wrapper = document.querySelector('.wrapper');
     let cards = Array.from(wrapper.querySelectorAll('.card'));
-    const gap = 20;
+    const gap = 5;
     const delay = 2000; 
     const transitionSpeed = 0.5; 
     let currentIndex = 0;
@@ -98,3 +98,4 @@ document.addEventListener('DOMContentLoaded', () => {
     updatePosition(false);
     startAutoScroll();
 });
+
