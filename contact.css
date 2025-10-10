@@ -323,12 +323,73 @@ body {
 @media (max-width: 480px) {
   .hero-text h1 { font-size: 1.5rem; }
   .hero-text p { font-size: 0.85rem; }
-  .card { width: 90px; height: 140px; border-radius: 100px; }
-  .card-text h3 { font-size: 0.7rem; }
-  .card-text p { font-size: 0.6rem; }
+
+ 
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card {
+    width: 150px;
+    height: 220px;
+    border-radius: 200px;
+  }
+
+  .card img {
+    border-radius: 200px;
+  }
+
+  .card-text {
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    padding: 8px 5px;
+  }
+
+  .card-text h3 { font-size: 0.85rem; }
+  .card-text p { font-size: 0.7rem; }
+
+ 
+  .section-heading {
+    margin-left: 0;
+    text-align: center;
+  }
+
   .section-heading h6 { font-size: 18px; }
   .section-heading p { font-size: 1rem; }
+
+
+  .banner-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .banner-image {
+    margin-top: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .banner-image img {
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  .text-section {
+    padding: 15px;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  
   .contact-section { padding: 20px 10px; }
-  .banner-image img { width: 90%; height: auto; }
-  .text-section { padding: 15px; margin-top: 10px; text-align: center; }
+  .contact-row { flex-direction: column; padding: 20px; gap: 20px; }
+  .contact-form button { margin-left: 0; }
+
+ 
+  .map iframe { height: 250px; width: 100%; border-radius: 8px; }
 }
