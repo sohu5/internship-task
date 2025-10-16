@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>fashion website
+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link rel="stylesheet" href="web.css">
+<link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Playwrite+DE+SAS:wght@100..400&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+<div class="topbar" role="banner">
+  <div class="container">
+    <div class="top-left">
+      <a href="#">My Account</a>
+      <span style="color:var(--muted)">|</span>
+      <a href="#">Currency</a>
+      <span style="color:var(--muted)">|</span>
+      <a href="#">Language</a>
+    </div>
+
+    <div class="top-center">Welcome to our online store!</div>
+
+    <div class="top-right">
+      <a href="#" title="Search" style="display:flex;align-items:center;gap:4px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="width:14px;height:14px;">
+          <circle cx="11" cy="11" r="6" />
+          <path d="M21 21l-4.35-4.35" stroke-linecap="round"></path>
+        </svg>
+        Search
+      </a>
+
+      <a href="#" title="Cart" style="display:flex;align-items:center;gap:4px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="width:14px;height:14px;">
+          <path d="M6 6h15l-1.5 9h-12z" stroke-linejoin="round"/>
+          <circle cx="9" cy="20" r="1"/>
+          <circle cx="18" cy="20" r="1"/>
+        </svg>
+        0 item
+      </a>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container">
+    <div class="logo"><span style="font-style:italic; font-size:24px;">Style</span><strong>look</strong></div>
+
+    <div class="nav-wrap">
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">CLOTHES</a></li>
+          <li><a href="#">COLLECTION</a></li>
+          <li><a href="#">ACCESSORIES</a></li>
+          <li><a href="#">JEANS</a></li>
+          <li><a href="#">SHIRT & T-SHIRT</a></li>
+          <li><a href="#">BLOG</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="right-actions">
+      <a class="icon-btn" href="#" title="Account">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/>
+          <path d="M4 20a8 8 0 0 1 16 0" stroke-linecap="round"/>
+        </svg>
+        Account
+      </a>
+
+      <a class="icon-btn" href="#" title="Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M6 6h15l-1.5 9h-12z" stroke-linejoin="round"/>
+          <circle cx="9" cy="20" r="1"/>
+          <circle cx="18" cy="20" r="1"/>
+        </svg>
+      </a>
+    </div>
+
+    
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</header>
+
+
+<div class="mobile-nav" id="mobileNav">
+  <button class="close-btn" id="closeNav">&times;</button>
+  <ul>
+    <li><a href="#">HOME</a></li>
+    <li><a href="#">CLOTHES</a></li>
+    <li><a href="#">COLLECTION</a></li>
+    <li><a href="#">ACCESSORIES</a></li>
+    <li><a href="#">JEANS</a></li>
+    <li><a href="#">SHIRT & T-SHIRT</a></li>
+    <li><a href="#">BLOG</a></li>
+  </ul>
+</div>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+const closeNav = document.getElementById('closeNav');
+
+hamburger.addEventListener('click', () => {
+  mobileNav.classList.add('active');
+});
+closeNav.addEventListener('click', () => {
+  mobileNav.classList.remove('active');
+});
+</script>
+</body>
+</html>

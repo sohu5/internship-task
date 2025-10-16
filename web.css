@@ -1,0 +1,225 @@
+:root{
+  --topbar-bg:#384959;;
+  --main-bg: #88BDf2;
+  --accent: black;
+  --link-color: #333;
+  --muted: #9a9a9a;
+  --nav-gap: 28px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+body { margin:0; background:#f5f5f5; }
+
+
+.topbar {
+  background: var(--topbar-bg);
+  color: #e6e6e6;
+  font-size: 12px;
+  line-height: 1;
+}
+.topbar .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.top-left, .top-center, .top-right 
+{ display:flex; 
+    align-items:center; 
+    gap:12px;
+    flex-wrap: wrap; 
+}
+.top-left a, .top-right a, .top-center
+ { color: #d0d0d0;
+     text-decoration:none; 
+     font-size:12px;
+     }
+.top-center 
+{ flex: 1;
+     justify-content:center; 
+     color:#cfcfcf; 
+     text-align: center;
+     }
+.top-right { 
+    justify-content:flex-end; 
+    color:#d0d0d0; 
+}
+.topbar a:hover 
+{ color: white;
+ }
+
+
+.header {
+  background: var(--main-bg);
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+  z-index: 100;
+}
+.header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 10px;
+}
+
+
+.logo {
+  font-family: "Playwrite DE SAS", cursive;
+  font-size: 28px;
+  font-weight: 400;
+  color: #111;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.logo strong { font-weight:700;
+     font-family: "Helvetica", sans-serif; 
+    }
+
+
+.nav-wrap {
+     position: relative;
+     flex: 1;
+      text-align: center; 
+    }
+nav.main-nav {
+     display:inline-block; 
+     position: relative;
+     }
+nav.main-nav ul {
+  margin:0;
+  padding:0;
+  list-style:none;
+  display:flex;
+  gap: var(--nav-gap);
+  align-items:center;
+  white-space:nowrap;
+  font-size:14px;
+  letter-spacing:0.02em;
+}
+nav.main-nav a {
+  text-decoration:none;
+  color: var(--accent);
+  padding:6px 2px;
+  display:inline-block;
+}
+nav.main-nav a:hover { color: var(--accent); }
+
+
+.right-actions {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width: 120px;
+  justify-content:flex-end;
+}
+.icon-btn {
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  color:black;
+  text-decoration:none;
+  font-size:13px;
+}
+.icon-btn svg { width:18px; height:18px; display:block; }
+
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 22px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  background:var(--topbar-bg);
+}
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+
+.mobile-nav {
+  display: flex; 
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--topbar-bg);
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  visibility: hidden; 
+}
+.mobile-nav.active {
+  transform: translateX(0);
+  visibility: visible;
+}
+.mobile-nav ul { list-style: none; 
+    padding: 0; 
+    margin: 0;
+     text-align: center;
+     }
+.mobile-nav li {
+     margin: 15px 0;
+     }
+.mobile-nav a { 
+    font-size: 22px;
+     color: #fff; 
+     text-decoration: none; 
+    }
+.mobile-nav a:hover { 
+    color: var(--accent); 
+}
+
+
+.mobile-nav .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.mobile-nav .close-btn:hover {
+  background: #fff;
+  color: #111;
+}
+
+
+@media (max-width: 1024px){
+  .nav-wrap { display: none; }
+  .hamburger { display: flex; }
+  .header .container { justify-content: space-between; }
+  .topbar .container { flex-wrap: wrap; }
+}
+
+@media (max-width: 650px){
+  .mobile-nav a { font-size: 20px; }
+  .topbar .container { padding: 6px 12px; }
+}
+
+nav.main-nav a { font-size: clamp(12px, 1.2vw, 16px); }
