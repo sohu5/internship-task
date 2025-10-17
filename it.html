@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fully Responsive Header</title>
+     <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Playwrite+DE+SAS:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="it.css">
+</head>
+<body>
+        <header class="header-section">
+               <div class="mobile-top-bar">
+            <div class="top-row">
+                <button class="navbar-toggler" id="navbarToggler">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="social-icon">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+                <button class="contact">Contact</button>
+            </div>
+        </div>
+         <div class="logo-box">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="nav-box" id="navBox">
+            <nav class="navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#">Home</a></li>
+                    <li class="nav-item"><a href="#">About</a></li>
+                    <li class="nav-item"><a href="#">Services</a></li>
+                    <li class="nav-item"><a href="#">Portfolio</a></li>
+                    <li class="nav-item"><a href="#">Blog</a></li>
+                    <li class="nav-item"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="social-icon">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                  <button class="contact">Contact</button>
+            </div>
+          
+        </div>
+    </header>
+    <script>
+       
+        document.getElementById('navbarToggler').addEventListener('click', function() {
+            document.getElementById('navBox').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
