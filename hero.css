@@ -1,0 +1,1554 @@
+:root {
+  --body-bg: #dfe6e9;
+  --logo-color: black;
+  --nav-color: #c6e41f;
+  --header-height: 70px;
+  --nav-height: 60px;
+  --transition: all 0.3s ease;
+  --white: white;
+}
+html, body {
+  overflow-x: hidden;
+}
+
+/* RESET */* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f9fafc;
+  overflow-x: hidden;
+}
+
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 20px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.navbar-container {
+  width: 100%;
+  background: rgba(96, 192, 52, 0.1);
+  border-radius: 50px;
+  padding: 1px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--nav-color);
+  border-radius: 40px;
+  padding: 6px 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: 0.3s;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-family: 'BBH Sans Bogle', Arial, sans-serif;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.btn {
+  background-color: var(--logo-color);
+  color: var(--white);
+  padding: 8px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  font-family: 'BBH Sans Bogle', Arial, sans-serif;
+}
+
+.btn:hover {
+  background-color: #ff9d00;
+  transform: translateY(-2px);
+}
+
+
+.heading {
+  text-align: center;
+  margin-top: 30px;
+  line-height: 1;
+}
+
+.text1 {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--nav-color);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.text2 {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 64px;
+  font-weight: 800;
+  color: #0a192f;
+  text-transform: uppercase;
+  font-family: 'BBH Sans Bogle', Arial, sans-serif;
+  letter-spacing: 2px;
+}
+
+
+.image-container {
+  position: relative;
+  width: 400px;
+  height: 350px;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.half-circle {
+  position: absolute;
+  top: 50%;
+  width: 800px;
+  height: 170px;
+  background: linear-gradient(to right, #1b73e8 50%, #c6e41f 50%);
+  border-bottom-left-radius: 450px;
+  border-bottom-right-radius: 450px;
+  z-index: 0;
+}
+
+.hero-img {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  z-index: 1;
+}
+
+
+.floating-icons span {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: #000;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: 'BBH Sans Bogle', Arial, sans-serif;
+  z-index: 2;
+  transition: transform 0.3s ease;
+  font-size: clamp(12px, 1.2vw, 18px);
+  padding: clamp(4px, 0.8vw, 8px) clamp(6px, 1.5vw, 14px);
+}
+
+.floating-icons span:hover {
+  transform: translateY(-5px);
+}
+
+.floating-icons i {
+  font-size: clamp(14px, 2vw, 20px);
+}
+
+
+.evanto i { color: #81b441; }
+.slack i { color: #611f69; }
+.figma i { color: #f24e1e; }
+.sketch i { color: #f7b500; }
+
+
+.evanto { top: 49%; left: 36%; }
+.slack { top: 70%; left: 34%; }
+.figma { top: 59%; right: 35%; }
+.sketch { top: 73%; right: 32%; }
+
+
+.service {
+  position: absolute;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: white;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  z-index: 3;
+  width: clamp(60px, 10vw, 90px);
+  height: clamp(60px, 10vw, 90px);
+  font-size: clamp(10px, 1vw, 12px);
+}
+
+.service i {
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+
+.uiux { background: #ff8c2b; border-radius: 50%; }
+.webdev { background: #1b73e8; border-radius: 45px; }
+.softwaredev { background: #6a1b9a; border-radius: 50% 50% 10% 50%; }
+.marketresearch { background: #00b894; border-radius: 50%; }
+.appdev { background: #ff4757; border-radius: 45px; }
+.businessdev { background: #f7b500; border-radius: 50% 50% 10% 50%; }
+
+
+.uiux { top: 30%; left: 15%; }
+.webdev { top: 55%; left: 10%; }
+.softwaredev { top: 75%; left: 20%; }
+.marketresearch { top: 30%; right: 15%; }
+.appdev { top: 55%; right: 10%; }
+.businessdev { top: 75%; right: 20%; }
+
+.webdev, .appdev {
+  width: clamp(80px, 15vw, 120px);
+  height: clamp(40px, 7vw, 60px);
+  border-radius: 9999px;
+}
+
+
+@media (max-width: 1109px) and (min-width: 1024px) {
+
+  .hero-section {
+    padding: 20px 30px;
+    height: 78vh;
+    width: 100%;
+    overflow:visible;
+  }
+
+  
+  .navbar-container {
+    border-radius: 40px;
+    margin-bottom: 15px;
+    width: 80%;
+  }
+
+  .navbar {
+    padding: 8px 18px;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  
+  .heading {
+    margin-top: 20px;
+  }
+
+  .text1 {
+    font-size: 18px;
+  }
+
+  .text2 {
+    font-size: 46px;
+  }
+
+  
+  .image-container {
+    width: 320px;
+    height: 280px;
+    margin-top: 40px;
+  }
+
+  .hero-img {
+    width: 320px;
+    height: 320px;
+  }
+
+  .half-circle {
+    width: 640px;
+    height: 130px;
+    top: 56%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  
+  .floating-icons span {
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+
+  .floating-icons i {
+    font-size: 15px;
+  }
+
+  .hero-section .floating-icons .evanto { top: 30%; left: 36%; }
+  .hero-section .floating-icons .slack  { top: 40%; left: 35%; }
+  .hero-section .floating-icons .figma  { top: 34%; right: 36%; }
+  .hero-section .floating-icons .sketch { top: 45%; right: 34%; }
+
+
+  
+  .service {
+    width: 65px;
+    height: 65px;
+    font-size: 10px;
+  }
+
+  .service i {
+    font-size: 15px;
+  }
+
+  
+  .uiux { top: 20%; left: 18%; }
+  .webdev { top: 35%; left: 13%; }
+  .softwaredev { top: 46%; left: 22%; }
+  .marketresearch { top: 20%; right: 18%; }
+  .appdev { top: 35%; right: 13%; }
+  .businessdev { top: 46%; right: 22%; }
+
+  .webdev, .appdev {
+    width: 85px;
+    height: 42px;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+}
+@media (min-width: 375px) and  (max-width: 678px)  {
+  .hero-section {
+    padding: 15px 20px;
+    height: 85vh;
+    width: 100%;
+    overflow: visible;
+  }
+
+  
+  .navbar-container {
+    border-radius: 35px;
+    margin-bottom: 12px;
+    width: 95%;
+  }
+
+  .navbar {
+    padding: 6px 15px;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center; 
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+  }
+
+  .logo img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-links {
+    gap: 15px;
+    justify-content: center; 
+    width: 100%;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .btn {
+    padding: 6px 16px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+ 
+  .heading {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .text1 {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .text2 {
+    font-size: 28px;
+    margin-top: 5px;
+  }
+
+ 
+  .image-container {
+    width: 220px;
+    height: 200px;
+    margin-top: 30px;
+  }
+
+  .hero-img {
+    width: 220px;
+    height: 220px;
+  }
+
+ 
+  .half-circle {
+    width: 320px; 
+    height: 80px; 
+    top: 58%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  
+  .floating-icons span {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+
+  .floating-icons i {
+    font-size: 12px;
+  }
+
+  .hero-section .floating-icons .evanto { top: 46%; left: 25%; }
+  .hero-section .floating-icons .slack  { top: 63%; left: 22%; }
+  .hero-section .floating-icons .figma  { top: 52%; right: 25%; }
+  .hero-section .floating-icons .sketch { top: 63%; right: 18%; }
+
+  
+  .service {
+    width: 40px;
+    height: 40px;
+    font-size: 6px;
+  }
+
+  .service i {
+    font-size: 12px;
+  }
+
+  
+  .uiux { top: 35%; left: 8%; }
+  .webdev { top: 52%; left: 5%; }
+  .softwaredev { top: 65%; left: 10%; }
+  .marketresearch { top: 35%; right: 8%; }
+  .appdev { top: 52%; right: 5%; }
+  .businessdev { top: 65%; right: 10%; }
+
+  .webdev, .appdev {
+    width: 70px;
+    height: 35px;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+@media (min-width: 1440px) {
+  .hero-section {
+    padding: 30px 100px;
+    height: 90vh;
+  }
+
+  .navbar-container {
+    width: 85%;
+  }
+
+  .text1 {
+    font-size: 24px;
+  }
+
+  .text2 {
+    font-size: 72px;
+  }
+
+  .image-container {
+    width: 450px;
+    height: 380px;
+    margin-top: 70px;
+  }
+
+  .hero-img {
+    width: 450px;
+    height: 450px;
+  }
+
+  .half-circle {
+    width: 900px;
+    height: 180px;
+  }
+
+  .floating-icons span {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+
+  .floating-icons i {
+    font-size: 18px;
+  }
+
+  .hero-section .floating-icons .evanto { top: 50%; left: 38%; }
+  .hero-section .floating-icons .slack  { top: 72%; left: 36%; }
+  .hero-section .floating-icons .figma  { top: 60%; right: 38%; }
+  .hero-section .floating-icons .sketch { top: 75%; right: 35%; }
+
+  .service {
+    width: 100px;
+    height: 100px;
+    font-size: 14px;
+  }
+
+  .service i {
+    font-size: 20px;
+  }
+
+  .uiux { top: 25%; left: 18%; }
+  .webdev { top: 50%; left: 12%; }
+  .softwaredev { top: 75%; left: 22%; }
+  .marketresearch { top: 25%; right: 18%; }
+  .appdev { top: 50%; right: 12%; }
+  .businessdev { top: 75%; right: 22%; }
+
+  .webdev, .appdev {
+    width: 130px;
+    height: 65px;
+  }
+}
+@media (min-width: 912px) and (max-width: 1023px) {
+  .hero-section {
+    padding: 25px 40px;
+    height: 82vh;
+  }
+
+  .navbar-container {
+    width: 90%;
+  }
+
+  .text1 {
+    font-size: 19px;
+  }
+
+  .text2 {
+    font-size: 52px;
+  }
+
+  .image-container {
+    width: 350px;
+    height: 300px;
+    margin-top: 45px;
+  }
+
+  .hero-img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .half-circle {
+    width: 680px;
+    height: 140px;
+  }
+
+  .floating-icons span {
+    font-size: 13px;
+    padding: 4px 9px;
+  }
+
+  .floating-icons i {
+    font-size: 15px;
+  }
+
+  .hero-section .floating-icons .evanto { top: 45%; left: 32%; }
+  .hero-section .floating-icons .slack  { top: 65%; left: 30%; }
+  .hero-section .floating-icons .figma  { top: 52%; right: 32%; }
+  .hero-section .floating-icons .sketch { top: 66%; right: 29%; }
+
+  .service {
+    width: 70px;
+    height: 70px;
+    font-size: 11px;
+  }
+
+  .service i {
+    font-size: 15px;
+  }
+
+  .uiux { top: 25%; left: 15%; }
+  .webdev { top: 48%; left: 10%; }
+  .softwaredev { top: 68%; left: 18%; }
+  .marketresearch { top: 25%; right: 15%; }
+  .appdev { top: 48%; right: 10%; }
+  .businessdev { top: 68%; right: 18%; }
+
+  .webdev, .appdev {
+    width: 95px;
+    height: 48px;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 911px) {
+  .hero-section {
+    padding: 20px 35px;
+    height: 80vh;
+  }
+
+  .navbar-container {
+    width: 92%;
+  }
+
+  .navbar {
+    padding: 7px 16px;
+    gap: 16px;
+  }
+
+  .logo img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+    padding: 7px 12px;
+  }
+
+  .btn {
+    padding: 7px 16px;
+    font-size: 15px;
+  }
+
+  .text1 {
+    font-size: 17px;
+  }
+
+  .text2 {
+    font-size: 44px;
+  }
+
+  .image-container {
+    width: 300px;
+    height: 260px;
+    margin-top: 40px;
+  }
+
+  .hero-img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .half-circle {
+    width: 580px;
+    height: 120px;
+  }
+
+  .floating-icons span {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .floating-icons i {
+    font-size: 14px;
+  }
+
+  .hero-section .floating-icons .evanto { top: 28%; left: 32%; }
+  .hero-section .floating-icons .slack  { top: 40%; left: 30%; }
+  .hero-section .floating-icons .figma  { top: 32%; right: 33%; }
+  .hero-section .floating-icons .sketch { top: 40%; right: 29%; }
+
+  .service {
+    width: 60px;
+    height: 60px;
+    font-size: 10px;
+  }
+
+  .service i {
+    font-size: 14px;
+  }
+
+  .uiux { top: 18%; left: 12%; }
+  .webdev { top: 30%; left: 8%; }
+  .softwaredev { top: 41%; left: 15%; }
+  .marketresearch { top: 18%; right: 12%; }
+  .appdev { top: 30%; right: 8%; }
+  .businessdev { top: 41%; right: 15%; }
+
+  .webdev, .appdev {
+    width: 85px;
+    height: 42px;
+  }
+}
+@media (min-width: 679px) and (max-width: 768px) {
+  .hero-section {
+    padding: 18px 30px;
+    height: 78vh;
+  }
+
+  .navbar-container {
+    width: 94%;
+  }
+
+  .navbar {
+    padding: 6px 14px;
+    gap: 14px;
+  }
+
+  .logo img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .btn {
+    padding: 6px 14px;
+    font-size: 14px;
+  }
+
+  .text1 {
+    font-size: 16px;
+  }
+
+  .text2 {
+    font-size: 38px;
+  }
+
+  .image-container {
+    width: 280px;
+    height: 240px;
+    margin-top: 35px;
+  }
+
+  .hero-img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .half-circle {
+    width: 500px;
+    height: 100px;
+  }
+
+  .floating-icons span {
+    font-size: 11px;
+    padding: 3px 7px;
+  }
+
+  .floating-icons i {
+    font-size: 13px;
+  }
+
+  .hero-section .floating-icons .evanto { top: 30%; left: 32%; }
+  .hero-section .floating-icons .slack  { top: 44%; left: 32%; }
+  .hero-section .floating-icons .figma  { top: 32%; right: 33%; }
+  .hero-section .floating-icons .sketch { top: 42%; right: 32%; }
+
+  .service {
+    width: 55px;
+    height: 55px;
+    font-size: 9px;
+  }
+
+  .service i {
+    font-size: 13px;
+  }
+
+  .uiux { top: 20%; left: 10%; }
+  .webdev { top: 35%; left: 6%; }
+  .softwaredev { top: 45%; left: 19%; }
+  .marketresearch { top: 20%; right: 10%; }
+  .appdev { top: 35%; right: 6%; }
+  .businessdev { top: 45%; right: 19%; }
+
+  .webdev, .appdev {
+    width: 80px;
+    height: 40px;
+  }
+}
+@media (min-width: 430px) and (max-width: 678px) {
+  .hero-section {
+    padding: 16px 25px;
+    height: 80vh;
+  }
+
+  .navbar-container {
+    width: 96%;
+  }
+
+  .navbar {
+    padding: 6px 12px;
+    gap: 12px;
+  }
+
+  .logo img {
+    width: 33px;
+    height: 33px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    padding: 6px 9px;
+  }
+
+  .btn {
+    padding: 6px 14px;
+    font-size: 14px;
+  }
+
+  .text1 {
+    font-size: 15px;
+  }
+
+  .text2 {
+    font-size: 32px;
+  }
+
+  .image-container {
+    width: 240px;
+    height: 210px;
+    margin-top: 30px;
+  }
+
+  .hero-img {
+    width: 240px;
+    height: 240px;
+  }
+
+  .half-circle {
+    width: 420px;
+    height: 85px;
+  }
+
+  .floating-icons span {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+
+  .floating-icons i {
+    font-size: 12px;
+  }
+
+  .hero-section .floating-icons .evanto { top: 38%; left: 26%; }
+  .hero-section .floating-icons .slack  { top: 50%; left: 23%; }
+  .hero-section .floating-icons .figma  { top: 38%; right: 26%; }
+  .hero-section .floating-icons .sketch { top: 49%; right: 20%; }
+
+  .service {
+    width: 50px;
+    height: 50px;
+    font-size: 8px;
+  }
+
+  .service i {
+    font-size: 12px;
+  }
+
+  .uiux { top: 26%; left: 8%; }
+  .webdev { top: 41%; left: 5%; }
+  .softwaredev { top: 52%; left: 10%; }
+  .marketresearch { top: 26%; right: 8%; }
+  .appdev { top: 41%; right: 5%; }
+  .businessdev { top: 52%; right: 10%; }
+
+  .webdev, .appdev {
+    width: 75px;
+    height: 38px;
+  }
+}
+@media (max-width: 319px) {
+  .hero-section {
+    padding: 10px 12px;
+    height: 75vh;
+  }
+
+  .navbar-container {
+    width: 100%;
+    border-radius: 25px;
+  }
+
+  .navbar {
+    padding: 4px 8px;
+    gap: 8px;
+  }
+
+  .logo img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  .btn {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+
+  .text1 {
+    font-size: 12px;
+  }
+
+  .text2 {
+    font-size: 24px;
+  }
+
+  .image-container {
+    width: 180px;
+    height: 150px;
+    margin-top: 20px;
+  }
+
+  .hero-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .half-circle {
+    width: 280px;
+    height: 60px;
+  }
+
+  .floating-icons span {
+    font-size: 9px;
+    padding: 2px 4px;
+  }
+
+  .floating-icons i {
+    font-size: 10px;
+  }
+
+  .hero-section .floating-icons .evanto { top: 44%; left: 22%; }
+  .hero-section .floating-icons .slack  { top: 62%; left: 20%; }
+  .hero-section .floating-icons .figma  { top: 50%; right: 22%; }
+  .hero-section .floating-icons .sketch { top: 62%; right: 16%; }
+
+  .service {
+    width: 40px;
+    height: 40px;
+    font-size: 6px;
+  }
+
+  .service i {
+    font-size: 10px;
+  }
+
+  .uiux { top: 30%; left: 5%; }
+  .webdev { top: 50%; left: 2%; }
+  .softwaredev { top: 65%; left: 8%; }
+  .marketresearch { top: 30%; right: 5%; }
+  .appdev { top: 50%; right: 2%; }
+  .businessdev { top: 65%; right: 8%; }
+
+  .webdev, .appdev {
+    width: 65px;
+    height: 32px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 414px) {
+  .hero-section {
+    padding: 15px 20px;
+    height: 85vh;
+  }
+
+  .navbar-container {
+    width: 95%;
+    border-radius: 30px;
+  }
+
+  .navbar {
+    padding: 6px 14px;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .logo img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 6px 16px;
+  }
+
+  .heading {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .text1 {
+    font-size: 14px;
+  }
+
+  .text2 {
+    font-size: 28px;
+  }
+
+  .image-container {
+    width: 220px;
+    height: 200px;
+    margin-top: 30px;
+  }
+
+  .hero-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .half-circle {
+    width: 360px;
+    height: 90px;
+    top: 58%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  
+  .floating-icons span {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+  .floating-icons i {
+    font-size: 12px;
+  }
+
+  .hero-section .floating-icons .evanto { top: 36%; left: 25%; }
+  .hero-section .floating-icons .slack  { top: 44%; left: 22%; }
+  .hero-section .floating-icons .figma  { top: 38%; right: 25%; }
+  .hero-section .floating-icons .sketch { top: 44%; right: 20%; }
+
+  
+  .service { width: 40px; height: 40px; font-size: 8px; }
+  .service i { font-size: 12px; }
+
+  .uiux { top: 28%; left: 8%; }
+  .webdev { top: 40%; left: 5%; }
+  .softwaredev { top: 50%; left: 10%; }
+  .marketresearch { top: 28%; right: 8%; }
+  .appdev { top: 40%; right: 5%; }
+  .businessdev { top: 50%; right: 10%; }
+
+  .webdev, .appdev { width: 70px; height: 35px; }
+
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+@media (min-width: 390px) and (max-width: 390px) {
+  .hero-section {
+    padding: 15px 20px;
+    height: 85vh;
+  }
+
+  .navbar-container {
+    width: 95%;
+    border-radius: 30px;
+  }
+
+  .navbar {
+    padding: 6px 14px;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .logo img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 6px 16px;
+  }
+
+  .heading {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .text1 {
+    font-size: 14px;
+  }
+
+  .text2 {
+    font-size: 28px;
+  }
+
+  .image-container {
+    width: 220px;
+    height: 200px;
+    margin-top: 30px;
+  }
+
+  .hero-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .half-circle {
+    width: 360px;
+    height: 90px;
+    top: 58%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+ 
+  .floating-icons span {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+  .floating-icons i {
+    font-size: 12px;
+  }
+
+  .hero-section .floating-icons .evanto { top: 36%; left: 25%; }
+  .hero-section .floating-icons .slack  { top: 44%; left: 22%; }
+  .hero-section .floating-icons .figma  { top: 38%; right: 25%; }
+  .hero-section .floating-icons .sketch { top: 44%; right: 20%; }
+
+ 
+  .service { width: 40px; height: 40px; font-size: 8px; }
+  .service i { font-size: 12px; }
+
+  .uiux { top: 28%; left: 8%; }
+  .webdev { top: 40%; left: 5%; }
+  .softwaredev { top: 53%; left: 10%; }
+  .marketresearch { top: 28%; right: 8%; }
+  .appdev { top: 40%; right: 5%; }
+  .businessdev { top: 53%; right: 10%; }
+
+  .webdev, .appdev { width: 70px; height: 35px; }
+
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+@media (min-width: 412px) and (max-width: 414px) {
+  .hero-section {
+    padding: 15px 20px;
+    height: 85vh;
+  }
+
+  .navbar-container {
+    width: 95%;
+    border-radius: 30px;
+  }
+
+  .navbar {
+    padding: 6px 14px;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .logo img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 6px 16px;
+  }
+
+  .heading {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .text1 {
+    font-size: 14px;
+  }
+
+  .text2 {
+    font-size: 28px;
+  }
+
+  .image-container {
+    width: 220px;
+    height: 200px;
+    margin-top: 30px;
+  }
+
+  .hero-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .half-circle {
+    width: 360px;
+    height: 90px;
+    top: 58%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Floating icons */
+  .floating-icons span {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+  .floating-icons i {
+    font-size: 12px;
+  }
+
+  .hero-section .floating-icons .evanto { top: 36%; left: 25%; }
+  .hero-section .floating-icons .slack  { top: 44%; left: 22%; }
+  .hero-section .floating-icons .figma  { top: 38%; right: 25%; }
+  .hero-section .floating-icons .sketch { top: 44%; right: 20%; }
+
+  /* Service shapes */
+  .service { width: 40px; height: 40px; font-size: 8px; }
+  .service i { font-size: 12px; }
+
+  .uiux { top: 28%; left: 8%; }
+  .webdev { top: 40%; left: 5%; }
+  .softwaredev { top: 50%; left: 10%; }
+  .marketresearch { top: 28%; right: 8%; }
+  .appdev { top: 40%; right: 5%; }
+  .businessdev { top: 50%; right: 10%; }
+
+  .webdev, .appdev { width: 70px; height: 35px; }
+
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+/* Samsung Galaxy S8+ Portrait */
+@media (max-width: 360px) {
+  .hero-section {
+    padding: 12px 15px;
+    height: 78vh;
+  }
+
+  .navbar-container {
+    width: 98%;
+    border-radius: 25px;
+  }
+
+  .navbar {
+    padding: 5px 8px;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .logo img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .nav-links a {
+    font-size: 5px;
+    padding: 4px 2px;
+  }
+
+  .btn {
+    font-size: 10px;
+    padding: 4px 12px;
+  }
+
+  .heading {
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  .text1 {
+    font-size: 12px;
+  }
+
+  .text2 {
+    font-size: 24px;
+  }
+
+  .image-container {
+    width: 180px;
+    height: 160px;
+    margin-top: 20px;
+  }
+
+  .hero-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .half-circle {
+    width: 320px;
+    height: 70px;
+    top: 58%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Floating icons */
+  .floating-icons span {
+    font-size: 9px;
+    padding: 2px 4px;
+  }
+
+  .floating-icons i {
+    font-size: 10px;
+  }
+
+  .hero-section .floating-icons .evanto { top: 30%; left: 24%; }
+  .hero-section .floating-icons .slack  { top: 40%; left: 20%; }
+  .hero-section .floating-icons .figma  { top: 33%; right: 25%; }
+  .hero-section .floating-icons .sketch { top: 42%; right: 19%; }
+
+  
+  .service { width: 35px; height: 35px; font-size: 6px; }
+  .service i { font-size: 10px; }
+
+  .uiux { top: 20%; left: 5%; }
+  .webdev { top: 30%; left: 2%; }
+  .softwaredev { top: 43%; left: 8%; }
+  .marketresearch { top: 20%; right: 5%; }
+  .appdev { top: 30%; right: 2%; }
+  .businessdev { top: 43%; right: 8%; }
+
+  .webdev, .appdev { width: 65px; height: 32px; }
+
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 599px) {
+  .hero-section {
+    padding: 18px 25px;
+    height: 85vh;
+  }
+
+  .navbar-container {
+    width: 94%;
+    border-radius: 30px;
+  }
+
+  .navbar {
+    padding: 8px 16px;
+    gap: 14px;
+    justify-content: center;
+  }
+
+  .logo img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+    padding: 6px 10px;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 6px 16px;
+  }
+
+  .heading {
+    text-align: center;
+    margin-top: 18px;
+  }
+
+  .text1 {
+    font-size: 16px;
+  }
+
+  .text2 {
+    font-size: 34px;
+  }
+
+  .image-container {
+    width: 260px;
+    height: 230px;
+    margin-top: 35px;
+  }
+
+  .hero-img {
+    width: 260px;
+    height: 260px;
+  }
+
+  .half-circle {
+    width: 480px;
+    height: 100px;
+    top: 58%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .floating-icons span {
+    font-size: 11px;
+    padding: 3px 7px;
+  }
+  .floating-icons i {
+    font-size: 13px;
+  }
+
+  .hero-section .floating-icons .evanto { top: 49%; left: 26%; }
+  .hero-section .floating-icons .slack  { top: 63%; left: 24%; }
+  .hero-section .floating-icons .figma  { top: 51%; right: 29%; }
+  .hero-section .floating-icons .sketch { top: 63%; right: 25%; }
+
+  .service { width: 50px; height: 50px; font-size: 9px; }
+  .service i { font-size: 13px; }
+
+  .uiux { top: 32%; left: 8%; }
+  .webdev { top: 51%; left: 6%; }
+  .softwaredev { top: 69%; left: 10%; }
+  .marketresearch { top: 32%; right: 8%; }
+  .appdev { top: 51%; right: 6%; }
+  .businessdev { top: 69%; right: 10%; }
+
+  .webdev, .appdev { width: 80px; height: 38px; }
+
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1023px) {
+  .hero-section {
+    padding: 30px 50px;
+    height: 85vh;
+  }
+
+  .navbar-container {
+    width: 88%;
+  }
+
+  .navbar {
+    padding: 10px 20px;
+    gap: 18px;
+  }
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .text1 {
+    font-size: 20px;
+  }
+
+  .text2 {
+    font-size: 54px;
+  }
+
+  .image-container {
+    width: 370px;
+    height: 320px;
+    margin-top: 50px;
+  }
+
+  .hero-img {
+    width: 370px;
+    height: 370px;
+  }
+
+  .half-circle {
+    width: 700px;
+    height: 150px;
+    top: 56%;
+  }
+
+  .floating-icons span {
+    font-size: 14px;
+    padding: 4px 9px;
+  }
+
+  .floating-icons i {
+    font-size: 15px;
+  }
+
+  .hero-section .floating-icons .evanto { top: 28%; left: 32%; }
+  .hero-section .floating-icons .slack  { top: 38%; left: 30%; }
+  .hero-section .floating-icons .figma  { top: 30%; right: 32%; }
+  .hero-section .floating-icons .sketch { top: 40%; right: 29%; }
+
+  .service {
+    width: 75px;
+    height: 75px;
+    font-size: 11px;
+  }
+
+  .service i {
+    font-size: 16px;
+  }
+
+  .uiux { top: 15%; left: 14%; }
+  .webdev { top: 30%; left: 10%; }
+  .softwaredev { top: 43%; left: 18%; }
+  .marketresearch { top: 15%; right: 14%; }
+  .appdev { top: 30%; right: 10%; }
+  .businessdev { top: 43%; right: 18%; }
+
+  .webdev, .appdev {
+    width: 100px;
+    height: 50px;
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+}
