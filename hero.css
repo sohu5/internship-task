@@ -172,6 +172,7 @@ body {
   transition: transform 0.3s ease;
   font-size: clamp(12px, 1.2vw, 18px);
   padding: clamp(4px, 0.8vw, 8px) clamp(6px, 1.5vw, 14px);
+    animation: floating-icons 3s ease-in-out infinite;
 }
 
 .floating-icons span:hover {
@@ -194,7 +195,17 @@ body {
 .figma { top: 59%; right: 35%; }
 .sketch { top: 73%; right: 32%; }
 
-
+@keyframes floating-icons {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(-8px) rotate(-1deg);
+  }
+}
 .service {
   position: absolute;
   display: inline-flex;
@@ -212,26 +223,62 @@ body {
   width: clamp(60px, 10vw, 90px);
   height: clamp(60px, 10vw, 90px);
   font-size: clamp(10px, 1vw, 12px);
+  
+  /* Floating animation */
+  animation: float 3s ease-in-out infinite;
 }
 
 .service i {
   font-size: clamp(14px, 2vw, 18px);
 }
 
-
 .service:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  animation-play-state: paused; /* Pause floating on hover */
 }
 
+/* Floating animation keyframes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
 
-.uiux { background: #ff8c2b; border-radius: 50%; }
-.webdev { background: #1b73e8; border-radius: 45px; }
-.softwaredev { background: #6a1b9a; border-radius: 50% 50% 10% 50%; }
-.marketresearch { background: #00b894; border-radius: 50%; }
-.appdev { background: #ff4757; border-radius: 45px; }
-.businessdev { background: #f7b500; border-radius: 50% 50% 10% 50%; }
-
+/* Optional: Add slight delay to each service for a wave effect */
+.uiux { 
+  background: #ff8c2b; 
+  border-radius: 50%; 
+  animation-delay: 0s;
+}
+.webdev { 
+  background: #1b73e8; 
+  border-radius: 45px; 
+  animation-delay: 0.2s;
+}
+.softwaredev { 
+  background: #6a1b9a; 
+  border-radius: 50% 50% 10% 50%; 
+  animation-delay: 0.4s;
+}
+.marketresearch { 
+  background: #00b894; 
+  border-radius: 50%; 
+  animation-delay: 0.6s;
+}
+.appdev { 
+  background: #ff4757; 
+  border-radius: 45px; 
+  animation-delay: 0.8s;
+}
+.businessdev { 
+  background: #f7b500; 
+  border-radius: 50% 50% 10% 50%; 
+  animation-delay: 1s;
+}
 
 .uiux { top: 30%; left: 15%; }
 .webdev { top: 55%; left: 10%; }
@@ -245,7 +292,20 @@ body {
   height: clamp(40px, 7vw, 60px);
   border-radius: 9999px;
 }
-
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-12px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  75% {
+    transform: translateY(-12px);
+  }
+}
 
 @media (max-width: 1109px) and (min-width: 1024px) {
 
