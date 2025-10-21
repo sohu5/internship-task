@@ -1,0 +1,769 @@
+
+        :root {
+            --body-bg: #dfe6e9;
+            --logo-color: black;
+            --nav-color: #c6e41f;
+            --header-height: 70px;
+            --nav-height: 60px;
+            --transition: all 0.3s ease;
+            --white: white;
+            --puzzle-image: url("https://i.pinimg.com/736x/56/0f/e1/560fe1c5d4b738623d9421b19723250b.jpg");
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--white);
+            font-family: 'BBH Sans Bogle', Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        
+        .header-section {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 0 1rem;
+            width: 100%;
+            background-color: transparent;
+            z-index: 10;
+        }
+
+        .hero-wrapper {
+            background-color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-box {
+            width: 28%;
+            min-width: 180px;
+            height: var(--header-height);
+            background-color: var(--logo-color);
+            clip-path: polygon(0 0, 71% 0, 84% 100%, 0 100%);
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .logo-box img {
+            height: 100%;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+            margin-left: 100px;
+        }
+
+        .nav-box {
+            flex: 1;
+            min-width: 70%;
+            height: var(--nav-height);
+            background-color: var(--nav-color);
+            clip-path: polygon(19% 0, 100% 0, 100% 100%, 22% 100%);
+            margin-left: -26%;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 18%;
+            overflow: visible;
+        }
+
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-left: 10%;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            width: 100%;
+        }
+
+        .nav-item {
+            margin: 0 1vw;
+        }
+
+        .nav-item a {
+            text-decoration: none;
+            color: black;
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 5px 8px;
+            border-radius: 4px;
+            font-family: 'BBH Sans Bogle', sans-serif;
+        }
+
+        .nav-item a:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            padding-right: 2%;
+            margin-right: 180px;
+        }
+
+        .social-icon a {
+            color: black;
+            margin: 0 0.8vw;
+            font-size: clamp(1rem, 1.8vw, 1.4rem);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-icon a:hover {
+            transform: scale(1.2);
+        }
+
+        .contact {
+            background-color: var(--logo-color);
+            color: #c6e41f;
+            border: none;
+            padding: 8px 25px;
+            font-size: clamp(0.9rem, 1.5vw, 1rem);
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            font-family: 'BBH Sans Bogle', sans-serif;
+            white-space: nowrap;
+        }
+
+        .contact:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 20px rgba(0,0,0,0.3);
+        }
+
+        .contact:active {
+            transform: translateY(1px);
+        }
+
+        .mobile-top-bar {
+            display: none;
+            background-color: var(--nav-color);
+            width: 100%;
+            padding: 8px 16px;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .mobile-top-bar .top-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            gap: 10px;
+        }
+
+        .mobile-top-bar .social-icon {
+            flex: 1;
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 0;
+            padding-right: 0;
+        }
+
+        .mobile-top-bar .contact {
+            flex-shrink: 0;
+            margin-left: 0;
+        }
+
+        .navbar-toggler {
+            border: none;
+            background: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+       
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-top: -10px;
+            min-height: 80vh;
+            flex-grow: 1;
+            padding: 0 2rem;
+            overflow: hidden;
+        }
+
+        .heading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 0;
+            z-index: 2;
+            position: relative;
+            text-align: center;
+        }
+
+        .text1 {
+            display: block;
+            color: var(--nav-color);
+            white-space: nowrap;
+            line-height: 1.2;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .text2 {
+            display: block;
+            color: var(--logo-color);
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 40px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 50px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .parallelogram {
+            background: #c6e41f;
+            color: black;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            font-family: "BBH Sans Bogle", sans-serif;
+            cursor: pointer;
+            clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
+            transition: all 0.3s ease;
+        }
+
+        .parallelogram:hover {
+            background: black;
+            color: #c6e41f;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(198, 228, 31, 0.8);
+        }
+
+        .bottom-right-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            width: 300px;
+            margin-top: 5px;
+            background-color: var(--nav-color);
+            padding: 20px;
+        }
+
+        .bottom-right-container .column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1rem;
+        }
+
+        .bottom-right-container .column i {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .bottom-right-container .column span {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+       
+        .puzzle-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+            gap: 0;
+            opacity: 0.7;
+            transform: rotate(-0deg) scale(1.1);
+            transform-origin: center;
+            overflow: hidden;
+        }
+        .puzzle-background[data-aos].aos-animate {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+}
+
+        .puzzle-piece {
+            width: 100%;
+            height: 100%;            background-image: var(--puzzle-image);
+            background-size: 1000% 1000%;
+            background-repeat: no-repeat;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            cursor: pointer;
+            position: relative;
+             transform-origin: center;
+    
+        }
+        .puzzle-piece[data-aos].aos-animate {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+}
+
+
+     
+        .piece-1 { background-position: 0% 0%; clip-path: polygon(0% 0%, 95% 0%, 95% 95%, 0% 95%); }
+        .piece-2 { background-position: 10% 0%; clip-path: polygon(5% 0%, 95% 0%, 95% 95%, 5% 95%); }
+        .piece-3 { background-position: 20% 0%; clip-path: polygon(5% 0%, 95% 0%, 95% 95%, 5% 95%); }
+        .piece-4 { background-position: 30% 0%; clip-path: polygon(5% 0%, 95% 0%, 95% 95%, 5% 95%); }
+        .piece-5 { background-position: 40% 0%; clip-path: polygon(5% 0%, 95% 0%, 95% 95%, 5% 95%); }
+        .piece-6 { background-position: 50% 0%; clip-path: polygon(5% 0%, 95% 0%, 95% 95%, 5% 95%); }
+        .piece-7 { background-position: 60% 0%; clip-path: polygon(5% 0%, 95% 0%, 95% 95%, 5% 95%); }
+        .piece-8 { background-position: 70% 0%; clip-path: polygon(5% 0%, 95% 0%, 95% 95%, 5% 95%); }
+        .piece-9 { background-position: 80% 0%; clip-path: polygon(5% 0%, 95% 0%, 95% 95%, 5% 95%); }
+        .piece-10 { background-position: 90% 0%; clip-path: polygon(5% 0%, 100% 0%, 100% 95%, 5% 95%); }
+
+      
+        .piece-11 { background-position: 0% 10%; clip-path: polygon(0% 5%, 95% 5%, 95% 95%, 0% 95%); }
+        .piece-12 { background-position: 10% 10%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-13 { background-position: 20% 10%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-14 { background-position: 30% 10%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-15 { background-position: 40% 10%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-16 { background-position: 50% 10%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-17 { background-position: 60% 10%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-18 { background-position: 70% 10%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-19 { background-position: 80% 10%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-20 { background-position: 90% 10%; clip-path: polygon(5% 5%, 100% 5%, 100% 95%, 5% 95%); }
+
+        
+        .piece-21 { background-position: 0% 20%; clip-path: polygon(0% 5%, 95% 5%, 95% 95%, 0% 95%); }
+        .piece-22 { background-position: 10% 20%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-23 { background-position: 20% 20%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-24 { background-position: 30% 20%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-25 { background-position: 40% 20%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-26 { background-position: 50% 20%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-27 { background-position: 60% 20%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-28 { background-position: 70% 20%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-29 { background-position: 80% 20%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-30 { background-position: 90% 20%; clip-path: polygon(5% 5%, 100% 5%, 100% 95%, 5% 95%); }
+
+       
+        .piece-31 { background-position: 0% 30%; clip-path: polygon(0% 5%, 95% 5%, 95% 95%, 0% 95%); }
+        .piece-32 { background-position: 10% 30%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-33 { background-position: 20% 30%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-34 { background-position: 30% 30%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-35 { background-position: 40% 30%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-36 { background-position: 50% 30%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-37 { background-position: 60% 30%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-38 { background-position: 70% 30%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-39 { background-position: 80% 30%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-40 { background-position: 90% 30%; clip-path: polygon(5% 5%, 100% 5%, 100% 95%, 5% 95%); }
+
+       
+        .piece-41 { background-position: 0% 40%; clip-path: polygon(0% 5%, 95% 5%, 95% 95%, 0% 95%); }
+        .piece-42 { background-position: 10% 40%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-43 { background-position: 20% 40%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-44 { background-position: 30% 40%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-45 { background-position: 40% 40%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-46 { background-position: 50% 40%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-47 { background-position: 60% 40%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-48 { background-position: 70% 40%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-49 { background-position: 80% 40%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-50 { background-position: 90% 40%; clip-path: polygon(5% 5%, 100% 5%, 100% 95%, 5% 95%); }
+
+       
+        .piece-51 { background-position: 0% 50%; clip-path: polygon(0% 5%, 95% 5%, 95% 95%, 0% 95%); }
+        .piece-52 { background-position: 10% 50%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-53 { background-position: 20% 50%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-54 { background-position: 30% 50%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-55 { background-position: 40% 50%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-56 { background-position: 50% 50%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-57 { background-position: 60% 50%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-58 { background-position: 70% 50%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-59 { background-position: 80% 50%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-60 { background-position: 90% 50%; clip-path: polygon(5% 5%, 100% 5%, 100% 95%, 5% 95%); }
+
+       
+        .piece-61 { background-position: 0% 60%; clip-path: polygon(0% 5%, 95% 5%, 95% 95%, 0% 95%); }
+        .piece-62 { background-position: 10% 60%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-63 { background-position: 20% 60%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-64 { background-position: 30% 60%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-65 { background-position: 40% 60%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-66 { background-position: 50% 60%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-67 { background-position: 60% 60%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-68 { background-position: 70% 60%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-69 { background-position: 80% 60%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-70 { background-position: 90% 60%; clip-path: polygon(5% 5%, 100% 5%, 100% 95%, 5% 95%); }
+
+       
+        .piece-71 { background-position: 0% 70%; clip-path: polygon(0% 5%, 95% 5%, 95% 95%, 0% 95%); }
+        .piece-72 { background-position: 10% 70%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-73 { background-position: 20% 70%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-74 { background-position: 30% 70%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-75 { background-position: 40% 70%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-76 { background-position: 50% 70%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-77 { background-position: 60% 70%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-78 { background-position: 70% 70%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-79 { background-position: 80% 70%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-80 { background-position: 90% 70%; clip-path: polygon(5% 5%, 100% 5%, 100% 95%, 5% 95%); }
+
+        
+        .piece-81 { background-position: 0% 80%; clip-path: polygon(0% 5%, 95% 5%, 95% 95%, 0% 95%); }
+        .piece-82 { background-position: 10% 80%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-83 { background-position: 20% 80%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-84 { background-position: 30% 80%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-85 { background-position: 40% 80%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-86 { background-position: 50% 80%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-87 { background-position: 60% 80%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-88 { background-position: 70% 80%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-89 { background-position: 80% 80%; clip-path: polygon(5% 5%, 95% 5%, 95% 95%, 5% 95%); }
+        .piece-90 { background-position: 90% 80%; clip-path: polygon(5% 5%, 100% 5%, 100% 95%, 5% 95%); }
+
+       
+        .piece-91 { background-position: 0% 90%; clip-path: polygon(0% 5%, 95% 5%, 95% 100%, 0% 100%); }
+        .piece-92 { background-position: 10% 90%; clip-path: polygon(5% 5%, 95% 5%, 95% 100%, 5% 100%); }
+        .piece-93 { background-position: 20% 90%; clip-path: polygon(5% 5%, 95% 5%, 95% 100%, 5% 100%); }
+        .piece-94 { background-position: 30% 90%; clip-path: polygon(5% 5%, 95% 5%, 95% 100%, 5% 100%); }
+        .piece-95 { background-position: 40% 90%; clip-path: polygon(5% 5%, 95% 5%, 95% 100%, 5% 100%); }
+        .piece-96 { background-position: 50% 90%; clip-path: polygon(5% 5%, 95% 5%, 95% 100%, 5% 100%); }
+        .piece-97 { background-position: 60% 90%; clip-path: polygon(5% 5%, 95% 5%, 95% 100%, 5% 100%); }
+        .piece-98 { background-position: 70% 90%; clip-path: polygon(5% 5%, 95% 5%, 95% 100%, 5% 100%); }
+        .piece-99 { background-position: 80% 90%; clip-path: polygon(5% 5%, 95% 5%, 95% 100%, 5% 100%); }
+        .piece-100 { background-position: 90% 90%; clip-path: polygon(5% 5%, 100% 5%, 100% 100%, 5% 100%); }
+
+       .puzzle-piece:hover {
+    transform: scale(1.08) rotate(0deg) !important;
+    z-index: 100;
+    border-color: #c6e41f;
+    box-shadow: 
+        0 15px 40px rgba(198, 228, 31, 0.4),
+        0 0 0 2px rgba(255, 255, 255, 0.8);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 
+            0 15px 40px rgba(198, 228, 31, 0.4),
+            0 0 0 2px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        box-shadow: 
+            0 15px 50px rgba(198, 228, 31, 0.6),
+            0 0 0 3px rgba(255, 255, 255, 0.9);
+    }
+    100% {
+        box-shadow: 
+            0 15px 40px rgba(198, 228, 31, 0.4),
+            0 0 0 2px rgba(255, 255, 255, 0.8);
+    }
+}
+
+.puzzle-piece:hover::after {
+    opacity: 1;
+}
+
+
+.puzzle-piece:active {
+    transform: scale(1.05) !important;
+    transition: transform 0.1s ease;
+}
+
+.piece-13 {
+    border: 2px solid rgba(198, 228, 31, 0.4);
+    animation: centerGlow 3s ease-in-out infinite;
+}
+
+@keyframes centerGlow {
+    0%, 100% {
+        border-color: rgba(198, 228, 31, 0.4);
+        box-shadow: 0 0 20px rgba(198, 228, 31, 0.2);
+    }
+    50% {
+        border-color: rgba(198, 228, 31, 0.8);
+        box-shadow: 0 0 30px rgba(198, 228, 31, 0.4);
+    }
+}
+
+.piece-13:hover {
+    border-color: #c6e41f;
+    box-shadow: 
+        0 20px 50px rgba(198, 228, 31, 0.6),
+        0 0 0 3px rgba(255, 255, 255, 0.9);
+    transform: scale(1.1) !important;
+    animation: none;
+}
+
+
+@keyframes pieceAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) rotate(-180deg);
+    }
+    70% {
+        transform: scale(1.1) rotate(10deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+
+.puzzle-piece {
+    animation: pieceAppear 0.8s ease-out both;
+}
+  
+        @media (max-width: 1440px) {
+            .hero {
+                min-height: 75vh;
+            }
+            
+            .text2 {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (max-width: 1200px) {
+          .navbar-nav li{
+            margin-left: -10px;
+          }
+            .hero {
+                min-height: 70vh;
+                padding: 0 40px;
+            }
+            
+            .text2 {
+                font-size: 3rem;
+            }
+            
+            .puzzle-background {
+                grid-template-columns: repeat(8, 1fr);
+                grid-template-rows: repeat(8, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .header-section {
+                flex-direction: column;
+                align-items: stretch;
+                padding: 0;
+            }
+
+            .logo-box {
+                width: 100%;
+                clip-path: none;
+                justify-content: center;
+                height: 60px;
+            }
+
+            .nav-box {
+                width: 100%;
+                clip-path: none;
+                margin-left: 0;
+                background-color: var(--nav-color);
+                flex-direction: column;
+                padding: 0;
+                height: auto;
+                display: none;
+            }
+
+            .nav-box.active {
+                display: flex;
+            }
+
+            .navbar {
+                width: 100%;
+            }
+
+            .navbar-nav {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px 0;
+                margin: 0;
+            }
+
+            .nav-item {
+                margin: 8px 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-item a {
+                display: block;
+                padding: 10px 0;
+                font-size: 1.1rem;
+            }
+
+            .mobile-top-bar {
+                display: flex;
+            }
+
+            .nav-box .contact,
+            .nav-box .social-icon {
+                display: none;
+            }
+
+            .social-icon {
+                margin-left: 0;
+            }
+
+            .hero {
+                flex-direction: column;
+                min-height: auto;
+                padding: 40px 20px;
+                gap: 40px;
+            }
+            
+            .heading {
+                width: 100%;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .text1 {
+                white-space: normal;
+                text-align: center;
+            }
+            
+            .text2 {
+                font-size: 2.5rem;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            
+            .buttons {
+                justify-content: center;
+                margin-bottom: 30px;
+            }
+            
+            .bottom-right-container {
+                justify-content: center;
+                margin-left: 0;
+            }
+            
+            .puzzle-background {
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 30px 15px;
+                gap: 30px;
+            }
+            
+            .text2 {
+                font-size: 2.2rem;
+            }
+            
+            .buttons {
+                gap: 15px;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .parallelogram {
+                padding: 10px 25px;
+                font-size: 1rem;
+            }
+            
+            .bottom-right-container {
+                gap: 30px;
+                padding: 15px;
+            }
+            
+            .bottom-right-container .column i {
+                font-size: 1.3rem;
+            }
+            
+            .bottom-right-container .column span {
+                font-size: 1.5rem;
+            }
+            
+            .puzzle-background {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 20px 10px;
+                gap: 25px;
+                margin-top: 0;
+            }
+            
+            .text1 {
+                font-size: 0.9rem;
+                margin-bottom: 8px;
+            }
+            
+            .text2 {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+            }
+            
+            .buttons {
+                gap: 12px;
+                margin-bottom: 25px;
+            }
+            
+            .parallelogram {
+                padding: 8px 20px;
+                font-size: 0.9rem;
+                width: 200px;
+                text-align: center;
+            }
+            
+            .bottom-right-container {
+                gap: 20px;
+                padding: 12px;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            
+            .bottom-right-container .column i {
+                font-size: 1.1rem;
+            }
+            
+            .bottom-right-container .column span {
+                font-size: 1.3rem;
+            }
+            
+            .puzzle-background {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+            }
+        }
+    
